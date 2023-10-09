@@ -1,0 +1,30 @@
+ALGORITHM array
+VAR
+    tab1, tab2 : array_name : ARRAY_OF INTEGER[100];
+    s,i,j :INTEGER
+    test: BOOLEAN
+BEGIN
+    s:=0
+    FOR i FROM 0 TO tab1.lenght-1 STEP   DO
+        test:=false
+        FOR j FROM 0 TO tab2 lenght-1 STEP step  DO
+            IF (tab1[i]=tab2[j]) THEN
+                test=true; break
+            END_IF
+        END_FOR
+       IF (test=false) THEN
+        s=s+tab1[i]
+       END_IF
+    END_FOR
+    FOR i FROM 0 TO tab2 length-1 STEP step  DO
+    test:=false
+        FOR j FROM 0 TO tab1 lenght-1 STEP step  DO
+            IF (tab2[i]=tab1[j]) THEN
+                test=true; break
+            END_IF
+        END_FOR
+         IF (test=false) THEN
+        s=s+tab2[i]
+    END_FOR
+write("la somme est",s)
+END
